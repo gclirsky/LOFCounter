@@ -19,13 +19,17 @@ public class Reporter {
 
     public final static DecimalFormat kCountFormat = new DecimalFormat("00000");
 
-    public Reporter(String dirPath, String fileType) {
+    public Reporter(String dirPath, String fileType) throws FileNotFoundException {
         // Process parameters
         // If valid path convert to a list of files
         if (dirPath != null) {
             path = dirPath;
             File directory = new File(path);
             fileArray = directory.listFiles();
+
+            if(fileArray == null) {
+                throw new FileNotFoundException("Invalid file path: " + path);
+            }
         }
 
         if (fileType != null) {
