@@ -89,7 +89,13 @@ public class Reporter {
                         stream = new BufferedReader(new FileReader(file));
                         currentLOC = LOC.getLinesInStream(stream);
 
-                        CountedFile entry = new CountedFile(filename, currentLOC);
+                        CountedFile entry = null;
+
+                        if(LOC.isIncluded){
+                            entry = new CountedFile(filename, currentLOC, LOC.includes);
+                        } else{
+                            entry = new CountedFile(filename, currentLOC);
+                        }
 
                         result.add(entry);
                         totalLOC = totalLOC + currentLOC;

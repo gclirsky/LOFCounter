@@ -324,4 +324,5 @@ Confirma eliminaci&oacute;n?
 	<br/>		
 </fieldset>
 </form>
+<jsp:include page="/include/footer.jsp"/>
 </div>

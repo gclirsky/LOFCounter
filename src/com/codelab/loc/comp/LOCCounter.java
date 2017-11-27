@@ -9,8 +9,15 @@ import java.util.Scanner;
 
 public abstract class LOCCounter {
     private boolean enabledCountComments = true;
+    protected boolean isIncluded=false;
     protected List<String> lines;
+    protected List<String> includes;
+
     protected abstract int countLines();
+
+    public boolean hasIncluded(){
+        return isIncluded;
+    }
 
     public LOCCounter(){
         lines = new ArrayList<String>();
@@ -46,6 +53,11 @@ public abstract class LOCCounter {
     public void resetCountedLines(){
         if(lines.size() > 0){
             lines.clear();
+        }
+
+        if(includes != null && includes.size()>0){
+            includes.clear();
+            isIncluded=false;
         }
     }
 }

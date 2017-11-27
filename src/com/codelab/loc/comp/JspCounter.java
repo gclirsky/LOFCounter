@@ -1,6 +1,18 @@
 package com.codelab.loc.comp;
 
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class JspCounter extends LOCCounter {
+
+    private static final Pattern pattern = Pattern.compile("^(<jsp:include page=\")(.*)(\"\\s?/>)");
+
+    public JspCounter() {
+        super();
+        includes = new ArrayList<String>();
+    }
+
     @Override
     protected int countLines() {
         int loc = 0;
@@ -18,6 +30,16 @@ public class JspCounter extends LOCCounter {
                     loc++;
                 }
             } else {
+                Matcher matcher = pattern.matcher(curLine);
+                if (matcher.find()) {
+//                    for (int i = 0; i < matcher.groupCount(); i++) {
+//                        System.out.println("matcher.group(" + i + "):" + matcher.group(i));
+//                    }
+                    isIncluded = true;
+                    includes.add(matcher.group(2));
+                }
+
+
                 int charPos = 0;
                 //loop through current line
                 while (charPos < curLine.length() - 1) { // end of comments from -->
@@ -58,7 +80,6 @@ public class JspCounter extends LOCCounter {
 //                    }
 
 
-
                     charPos++;
                 }
 
@@ -66,7 +87,7 @@ public class JspCounter extends LOCCounter {
                 if (charPos == curLine.length() - 1 && !inCommentBlock) {
                     //check for > to add to location not -->
                     if (curLine.charAt(charPos) == '>') {
-                        if(curLine.charAt(charPos - 1) != '-')
+                        if (curLine.charAt(charPos - 1) != '-')
                             loc++;
                     } else {
                         loc++;

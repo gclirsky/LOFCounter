@@ -3,9 +3,13 @@ package com.codelab.loc.app;
 import com.codelab.loc.comp.Reporter;
 
 import java.io.FileNotFoundException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TestApp {
-    public static void main(String[] args){
+
+
+    public static void main(String[] args) {
         try {
             System.out.println("File analysis starts ...");
             if (args.length > 0) {
@@ -29,8 +33,7 @@ public class TestApp {
                 reporter.countLines();
                 reporter.print();
             }
-        }
-        catch (FileNotFoundException ex){
+        } catch (FileNotFoundException ex) {
             ex.printStackTrace();
             System.err.println("Cannot find any files. " + ex.getMessage());
         }
