@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5364d026-47e9-4397-8a62-6a6381752065" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/codelab/loc/app/TestApp.java" afterPath="$PROJECT_DIR$/src/com/codelab/loc/app/SampleApp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/files/playerinfo.jsp" afterPath="$PROJECT_DIR$/resources/files/playerinfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/codelab/loc/app/TestApp.java" afterPath="$PROJECT_DIR$/src/com/codelab/loc/app/TestApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/codelab/loc/comp/CountedFile.java" afterPath="$PROJECT_DIR$/src/com/codelab/loc/comp/CountedFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/codelab/loc/comp/JspCounter.java" afterPath="$PROJECT_DIR$/src/com/codelab/loc/comp/JspCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/codelab/loc/comp/LOCCounter.java" afterPath="$PROJECT_DIR$/src/com/codelab/loc/comp/LOCCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/codelab/loc/comp/Reporter.java" afterPath="$PROJECT_DIR$/src/com/codelab/loc/comp/Reporter.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +14,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="SampleApp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/codelab/loc/app/SampleApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,6 +47,7 @@
         <option value="$PROJECT_DIR$/src/com/codelab/loc/comp/JspCounter.java" />
         <option value="$PROJECT_DIR$/src/com/codelab/loc/comp/LOCCounter.java" />
         <option value="$PROJECT_DIR$/src/com/codelab/loc/comp/CountedFile.java" />
+        <option value="$PROJECT_DIR$/src/com/codelab/loc/app/SampleApp.java" />
       </list>
     </option>
   </component>
@@ -164,7 +172,7 @@
   <component name="RunManager" selected="Application.CLI">
     <configuration name="CLI" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.codelab.loc.app.TestApp" />
+      <option name="MAIN_CLASS_NAME" value="com.codelab.loc.app.SampleApp" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/out/production/LOFCounter/files jsp" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -281,6 +289,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="23" width="1387" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -397,16 +406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/codelab/loc/app/TestApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/files/playerinfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -458,6 +457,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/codelab/loc/app/SampleApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding />
         </state>
       </provider>

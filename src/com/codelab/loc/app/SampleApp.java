@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class TestApp {
+public class SampleApp {
 
 
     public static void main(String[] args) {
