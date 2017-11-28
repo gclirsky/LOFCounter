@@ -6,7 +6,8 @@ import java.util.regex.Pattern;
 
 public class JspCounter extends LOCCounter {
 
-    private static final Pattern pattern = Pattern.compile("^(<jsp:include page=\")(.*)(\"\\s?/>)");
+    private static final Pattern pattern1 = Pattern.compile("^(\\s*<jsp:include page=\")(.*)(\"\\s?/>)");
+    private static final Pattern pattern2 = Pattern.compile("^(\\s*<jsp:include page=\")(.*)(\"\\s?>)(</jsp:include>)");
 
     public JspCounter() {
         super();
@@ -30,7 +31,7 @@ public class JspCounter extends LOCCounter {
                     loc++;
                 }
             } else {
-                Matcher matcher = pattern.matcher(curLine);
+                Matcher matcher = pattern1.matcher(curLine);
                 if (matcher.find()) {
 //                    for (int i = 0; i < matcher.groupCount(); i++) {
 //                        System.out.println("matcher.group(" + i + "):" + matcher.group(i));
@@ -39,6 +40,13 @@ public class JspCounter extends LOCCounter {
                     includes.add(matcher.group(2));
                 }
 
+                if(!isIncluded){
+                    matcher = pattern2.matcher(curLine);
+                    if (matcher.find()) {
+                        isIncluded = true;
+                        includes.add(matcher.group(2));
+                    }
+                }
 
                 int charPos = 0;
                 //loop through current line
